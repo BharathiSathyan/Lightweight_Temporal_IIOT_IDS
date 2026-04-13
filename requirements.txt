@@ -1,13 +1,34 @@
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# TensorFlow (optional if comparing or fallback)
 tensorflow==2.13.0
+
+# Data Processing
 numpy>=1.23.0
 pandas>=1.5.0
 scikit-learn>=1.2.0
+
+# File formats
 pyarrow>=11.0.0
 fastparquet>=2023.1.0
+
+# Explainability
 shap>=0.42.0
+
+# Visualization
 matplotlib>=3.7.0
 seaborn>=0.12.0
+
+# API
 flask>=2.3.0
+
+# System + performance
 psutil>=5.9.0
 joblib>=1.2.0
 tqdm>=4.65.0
+
+# Optional (VERY USEFUL)
+scipy>=1.10.0        # required by sklearn/shap internally
+plotly>=5.15.0      # interactive plots (optional but impressive)
