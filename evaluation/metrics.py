@@ -107,8 +107,4 @@ def compare_models(results_dict: dict) -> None:
             f"{m['recall']:>10.4f} "
             f"{m['f1_macro']:>10.4f}"
         )
-<<<<<<< HEAD
         logger.info(row)
-=======
-        logger.info(row)
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

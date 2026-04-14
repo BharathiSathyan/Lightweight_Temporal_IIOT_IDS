@@ -86,8 +86,4 @@ def build_gru_only(
         loss="categorical_crossentropy",
         metrics=["accuracy"]
     )
-<<<<<<< HEAD
     return model
-=======
-    return model
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

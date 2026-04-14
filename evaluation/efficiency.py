@@ -117,8 +117,4 @@ def full_efficiency_report(
         logger.info(f"  Inference:     {inf_time['per_sample_mean_ms']} ms/sample")
         logger.info(f"  Peak memory:   {mem_mb} MB")
 
-<<<<<<< HEAD
     return report
-=======
-    return report
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

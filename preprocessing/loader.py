@@ -103,8 +103,4 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
         df[col] = df[col].fillna(df[col].mode()[0] if not df[col].mode().empty else "unknown")
 
     logger.info("Missing values handled (numeric→median, categorical→mode)")
-<<<<<<< HEAD
     return df
-=======
-    return df
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

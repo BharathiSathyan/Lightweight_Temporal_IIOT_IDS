@@ -65,8 +65,4 @@ N_SHAP_SAMPLES    = 200     # samples for SHAP background
 
 # ─── Ensure directories exist ─────────────────────────────────────────────────
 for _dir in [DATA_DIR, OUTPUTS_DIR, PLOTS_DIR, MODELS_DIR]:
-<<<<<<< HEAD
     os.makedirs(_dir, exist_ok=True)
-=======
-    os.makedirs(_dir, exist_ok=True)
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

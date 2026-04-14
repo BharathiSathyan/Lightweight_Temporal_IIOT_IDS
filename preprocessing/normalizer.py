@@ -46,8 +46,4 @@ def load_scaler(scaler_path: str) -> MinMaxScaler:
     """Load a previously fitted scaler."""
     scaler = joblib.load(scaler_path)
     logger.info(f"Scaler loaded from {scaler_path}")
-<<<<<<< HEAD
     return scaler
-=======
-    return scaler
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

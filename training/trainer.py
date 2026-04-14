@@ -158,8 +158,4 @@ def compute_class_weights(y_integer: np.ndarray, n_classes: int) -> dict:
     )
     weight_dict = {int(c): float(w) for c, w in zip(unique_classes, weights)}
     logger.info(f"Class weights: {weight_dict}")
-<<<<<<< HEAD
     return weight_dict
-=======
-    return weight_dict
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

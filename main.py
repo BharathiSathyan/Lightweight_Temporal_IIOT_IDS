@@ -20,10 +20,7 @@ Usage:
 import argparse
 import logging
 import os
-<<<<<<< HEAD
 import json
-=======
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 import numpy as np
 import joblib
 import tensorflow as tf
@@ -64,10 +61,7 @@ from utils.helpers           import set_seeds, setup_logging, split_data, to_one
 from utils.visualizer        import (plot_training_curves, plot_confusion_matrix,
                                       plot_model_comparison, plot_efficiency_comparison,
                                       plot_class_f1)
-<<<<<<< HEAD
 from models.cnn_gru import focal_loss
-=======
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 
 logger = logging.getLogger(__name__)
 
@@ -143,7 +137,6 @@ def run_preprocessing() -> tuple:
         df.to_csv(PROCESSED_FILE, index=False)
         logger.info(f"Processed dataset saved → {PROCESSED_FILE}")
 
-<<<<<<< HEAD
 
     # ── 1f. Feature / label split ─────────────────────────────────────────────
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
@@ -154,13 +147,6 @@ def run_preprocessing() -> tuple:
     y_raw = df[ATTACK_COL].values.astype(np.int32)
     n_classes = len(class_names)
   
-=======
-    # ── 1f. Feature / label split ─────────────────────────────────────────────
-    feature_names = get_feature_columns(df, target_col=ATTACK_COL)
-    X_raw = df[feature_names].values.astype(np.float32)
-    y_raw = df[ATTACK_COL].values.astype(np.int32)
-    n_classes = len(class_names)
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 
     logger.info(f"Features: {len(feature_names)} | Classes: {n_classes} | Samples: {len(X_raw):,}")
 
@@ -171,11 +157,8 @@ def run_preprocessing() -> tuple:
         val_size=VALIDATION_SIZE,
         random_seed=RANDOM_SEED,
     )
-<<<<<<< HEAD
     
-=======
 
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
     # ── 1h. Normalize — fit on train only ─────────────────────────────────────
     if os.path.exists(SCALER_FILE):
         scaler = load_scaler(SCALER_FILE)
@@ -323,16 +306,12 @@ def run_evaluation(
         train_times[name] = train_time
 
         # Training curves
-<<<<<<< HEAD
         history_path = os.path.join(MODELS_DIR, f"{name.replace('-', '_')}_history.json")
 
         if os.path.exists(history_path):
             with open(history_path) as f:
                 history_data = json.load(f)
             plot_training_curves(history_data, model_name=name, save_dir=PLOTS_DIR)
-=======
-        plot_training_curves(history, model_name=name, save_dir=PLOTS_DIR)
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 
         # Confusion matrix
         plot_confusion_matrix(
@@ -474,7 +453,6 @@ def run_ablation(
     # Load pre-trained CNN-GRU if exists
     cnn_gru_path = os.path.join(MODELS_DIR, "CNN_GRU_IDS.keras")
     if os.path.exists(cnn_gru_path):
-<<<<<<< HEAD
         # m_hybrid = tf.keras.models.load_model(cnn_gru_path)
         try:
             m_hybrid = tf.keras.models.load_model(
@@ -483,9 +461,6 @@ def run_ablation(
             )
         except:
             m_hybrid = tf.keras.models.load_model(cnn_gru_path, compile=False)
-=======
-        m_hybrid = tf.keras.models.load_model(cnn_gru_path)
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
         ablation_trained["CNN-GRU (Full)"] = (m_hybrid, None, None)
 
     # Evaluate all ablation models
@@ -569,7 +544,6 @@ def main():
             ("MLP",     "MLP_Baseline.keras"),
         ]:
             p = os.path.join(MODELS_DIR, fname)
-<<<<<<< HEAD
             if os.path.exists(p):                
                 if mname == "CNN-GRU":
                     trained_models[mname] = (
@@ -588,10 +562,6 @@ def main():
                         None,
                         None
                     )
-=======
-            if os.path.exists(p):
-                trained_models[mname] = (tf.keras.models.load_model(p), None, None)
->>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
                 logger.info(f"Loaded model: {mname} from {p}")
             else:
                 logger.warning(f"Model not found: {p} — run --mode train first.")
