@@ -1,0 +1,59 @@
+{
+  "CNN-Only": {
+    "accuracy": 0.5259,
+    "precision": 0.4835,
+    "recall": 0.5303,
+    "f1_macro": 0.4983,
+    "f1_per_class": {
+      "Benign": 0.1446,
+      "backdoor": 0.9907,
+      "ddos": 0.569,
+      "dos": 0.4615,
+      "injection": 0.2982,
+      "mitm": 0.3294,
+      "password": 0.7018,
+      "ransomware": 0.835,
+      "scanning": 0.6,
+      "xss": 0.0526
+    },
+    "report": "              precision    recall  f1-score   support\n\n      Benign       0.21      0.11      0.14        55\n    backdoor       1.00      0.98      0.99        54\n        ddos       0.51      0.65      0.57        51\n         dos       0.39      0.56      0.46        43\n   injection       0.36      0.25      0.30        67\n        mitm       0.32      0.34      0.33        41\n    password       0.68      0.73      0.70        55\n  ransomware       0.78      0.90      0.83        48\n    scanning       0.50      0.75      0.60        56\n         xss       0.08      0.04      0.05        51\n\n    accuracy                           0.53       521\n   macro avg       0.48      0.53      0.50       521\nweighted avg       0.49      0.53      0.50       521\n"
+  },
+  "GRU-Only": {
+    "accuracy": 0.6507,
+    "precision": 0.6495,
+    "recall": 0.6521,
+    "f1_macro": 0.6192,
+    "f1_per_class": {
+      "Benign": 0.4578,
+      "backdoor": 1.0,
+      "ddos": 0.6875,
+      "dos": 0.5821,
+      "injection": 0.5882,
+      "mitm": 0.4194,
+      "password": 0.6792,
+      "ransomware": 0.8654,
+      "scanning": 0.7328,
+      "xss": 0.1791
+    },
+    "report": "              precision    recall  f1-score   support\n\n      Benign       0.68      0.35      0.46        55\n    backdoor       1.00      1.00      1.00        54\n        ddos       0.57      0.86      0.69        51\n         dos       0.43      0.91      0.58        43\n   injection       0.67      0.52      0.59        67\n        mitm       0.62      0.32      0.42        41\n    password       0.71      0.65      0.68        55\n  ransomware       0.80      0.94      0.87        48\n    scanning       0.64      0.86      0.73        56\n         xss       0.38      0.12      0.18        51\n\n    accuracy                           0.65       521\n   macro avg       0.65      0.65      0.62       521\nweighted avg       0.66      0.65      0.62       521\n"
+  },
+  "CNN-GRU (Full)": {
+    "accuracy": 0.5432,
+    "precision": 0.5597,
+    "recall": 0.5517,
+    "f1_macro": 0.5163,
+    "f1_per_class": {
+      "Benign": 0.1714,
+      "backdoor": 0.9515,
+      "ddos": 0.6142,
+      "dos": 0.3103,
+      "injection": 0.3443,
+      "mitm": 0.5289,
+      "password": 0.475,
+      "ransomware": 0.8257,
+      "scanning": 0.6853,
+      "xss": 0.2569
+    },
+    "report": "              precision    recall  f1-score   support\n\n      Benign       0.40      0.11      0.17        55\n    backdoor       1.00      0.91      0.95        54\n        ddos       0.51      0.76      0.61        51\n         dos       0.60      0.21      0.31        43\n   injection       0.38      0.31      0.34        67\n        mitm       0.40      0.78      0.53        41\n    password       0.76      0.35      0.47        55\n  ransomware       0.74      0.94      0.83        48\n    scanning       0.56      0.88      0.69        56\n         xss       0.24      0.27      0.26        51\n\n    accuracy                           0.54       521\n   macro avg       0.56      0.55      0.52       521\nweighted avg       0.56      0.54      0.51       521\n"
+  }
+}

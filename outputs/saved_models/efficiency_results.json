@@ -1,0 +1,41 @@
+{
+  "CNN-GRU": {
+    "size_mb": 0.303,
+    "train_time_s": "N/A",
+    "train_time_min": "N/A",
+    "inference_ms": {
+      "mean_ms": 100.849,
+      "std_ms": 25.51,
+      "min_ms": 69.689,
+      "max_ms": 165.872,
+      "per_sample_mean_ms": 100.849
+    },
+    "peak_memory_mb": 473.04
+  },
+  "BiLSTM": {
+    "size_mb": 1.317,
+    "train_time_s": "N/A",
+    "train_time_min": "N/A",
+    "inference_ms": {
+      "mean_ms": 77.572,
+      "std_ms": 11.028,
+      "min_ms": 66.548,
+      "max_ms": 115.836,
+      "per_sample_mean_ms": 77.572
+    },
+    "peak_memory_mb": 474.67
+  },
+  "MLP": {
+    "size_mb": 0.926,
+    "train_time_s": "N/A",
+    "train_time_min": "N/A",
+    "inference_ms": {
+      "mean_ms": 87.346,
+      "std_ms": 37.554,
+      "min_ms": 65.404,
+      "max_ms": 300.862,
+      "per_sample_mean_ms": 87.346
+    },
+    "peak_memory_mb": 455.86
+  }
+}
