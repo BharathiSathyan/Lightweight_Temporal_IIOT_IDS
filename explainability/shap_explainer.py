@@ -98,6 +98,7 @@ def plot_shap_summary(
 
     # Average SHAP values across classes
     # shap_values is list of (M, T*F) arrays
+<<<<<<< HEAD
     # mean_shap = np.mean(np.abs(np.stack(shap_values, axis=0)), axis=0)  # (M, T*F)
 
     # ── Fix: handle multi-class SHAP properly ─────────────────────
@@ -111,6 +112,9 @@ def plot_shap_summary(
         shap_values = np.mean(np.abs(shap_values), axis=2)  # (M, T*F)
 
     mean_shap = shap_values  # final shape (M, T*F)
+=======
+    mean_shap = np.mean(np.abs(np.stack(shap_values, axis=0)), axis=0)  # (M, T*F)
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
     X_flat = X_explain.reshape(len(X_explain), -1)
 
     # ── Collapse over timesteps: mean per original feature ───────────────────
@@ -176,6 +180,7 @@ def plot_shap_per_class(
 
     for cls_idx in target_classes:
         cls_name = class_names[cls_idx] if cls_idx < len(class_names) else f"class_{cls_idx}"
+<<<<<<< HEAD
         # sv_cls   = shap_values[cls_idx]   # (M, T*F)
 
         # ── Fix multi-class SHAP output ─────────────────────────────
@@ -189,6 +194,9 @@ def plot_shap_per_class(
 
         else:
             sv_cls = shap_values  # fallback
+=======
+        sv_cls   = shap_values[cls_idx]   # (M, T*F)
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 
         # Mean |SHAP| per original feature (collapsed over timesteps)
         mean_per_feature = np.zeros(n_features)
@@ -213,4 +221,8 @@ def plot_shap_per_class(
         path = os.path.join(save_dir, f"shap_{safe_name}.png")
         fig.savefig(path, dpi=150)
         plt.close(fig)
+<<<<<<< HEAD
         logger.info(f"  Saved class SHAP plot: {path}")
+=======
+        logger.info(f"  Saved class SHAP plot: {path}")
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

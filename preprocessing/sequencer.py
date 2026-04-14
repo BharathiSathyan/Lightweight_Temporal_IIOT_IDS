@@ -113,4 +113,8 @@ def stratified_sample(
 
 
 # need pandas for the function above
+<<<<<<< HEAD
 import pandas as pd  # noqa: E402
+=======
+import pandas as pd  # noqa: E402
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

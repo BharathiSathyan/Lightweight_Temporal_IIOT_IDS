@@ -283,4 +283,8 @@ def plot_class_f1(
     path = os.path.join(save_dir, "per_class_f1.png")
     fig.savefig(path, dpi=150, bbox_inches="tight")
     plt.close(fig)
+<<<<<<< HEAD
     logger.info(f"  Saved per-class F1: {path}")
+=======
+    logger.info(f"  Saved per-class F1: {path}")
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

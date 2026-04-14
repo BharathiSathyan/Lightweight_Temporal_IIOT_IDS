@@ -66,4 +66,8 @@ def build_mlp(
         metrics=["accuracy"]
     )
     model.summary(print_fn=logger.info)
+<<<<<<< HEAD
     return model
+=======
+    return model
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

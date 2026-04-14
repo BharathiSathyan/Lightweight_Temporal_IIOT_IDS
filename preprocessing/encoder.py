@@ -70,4 +70,8 @@ def encode_categorical_features(df: pd.DataFrame, exclude_cols: list = None) -> 
 
 def get_feature_columns(df: pd.DataFrame, target_col: str) -> list:
     """Return list of feature column names (everything except target)."""
+<<<<<<< HEAD
     return [c for c in df.columns if c != target_col]
+=======
+    return [c for c in df.columns if c != target_col]
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

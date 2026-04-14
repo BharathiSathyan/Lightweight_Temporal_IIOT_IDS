@@ -100,4 +100,8 @@ def save_json(obj: dict, path: str) -> None:
 
 def load_json(path: str) -> dict:
     with open(path) as f:
+<<<<<<< HEAD
         return json.load(f)
+=======
+        return json.load(f)
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b

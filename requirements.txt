@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 tensorflow
+=======
+tensorflow==2.13.0
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 numpy>=1.23.0
 pandas>=1.5.0
 scikit-learn>=1.2.0

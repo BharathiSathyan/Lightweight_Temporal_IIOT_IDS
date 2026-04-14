@@ -44,7 +44,10 @@ import tensorflow as tf
 from training.config import (
     MODELS_DIR, DATA_DIR, WINDOW_SIZE, SCALER_FILE, ENCODER_FILE
 )
+<<<<<<< HEAD
 from models.cnn_gru import focal_loss
+=======
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
 
 app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -66,8 +69,12 @@ def load_artifacts():
     encoder_path = ENCODER_FILE
 
     if os.path.exists(model_path):
+<<<<<<< HEAD
         # MODEL = tf.keras.models.load_model(model_path)
         MODEL = tf.keras.models.load_model(model_path, compile=False)
+=======
+        MODEL = tf.keras.models.load_model(model_path)
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
         logger.info(f"Model loaded: {model_path}")
     else:
         logger.warning(f"Model not found at {model_path}. Run main.py first.")
@@ -199,4 +206,8 @@ def predict_batch():
 
 if __name__ == "__main__":
     load_artifacts()
+<<<<<<< HEAD
     app.run(host="0.0.0.0", port=5000, debug=False)
+=======
+    app.run(host="0.0.0.0", port=5000, debug=False)
+>>>>>>> de5c81167c17183540ab354e797bd66b1ffbf19b
